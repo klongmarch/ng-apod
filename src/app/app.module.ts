@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ApodComponent } from './apod/apod.component';
+import { NgApodConfig } from '../../../config/ng-apod.config';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { ApodComponent } from './apod/apod.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [NgApodConfig],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
