@@ -1,7 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+// 1. import the component to which you want to redirect.
+import { ApodComponent } from './apod/apod.component';
+
+const routes: Routes = [
+  //3. redirect an empty route to a given path
+  { path: '', redirectTo: '/apod', pathMatch: 'full'},
+  // 2. Define the path that will load a given component
+  { path: 'apod', component: ApodComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
