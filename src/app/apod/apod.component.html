@@ -8,10 +8,17 @@
     <img *ngIf="apod.media_type==='image'" [src]="apod.url" [alt]="apod.title">
   
     <!-- Display and embed the YouTube video if the media_type is set to video -->
-    <iframe *ngIf="apod.media_type==='video'" [src]="apod.url | safe: 'resourceUrl'" frameborder="0" allowfullscreen></iframe>
+    <div id="video" *ngIf="apod.media_type==='video'">
+        <!-- iframe *ngIf="apod.media_type==='video'" [src]="apod.url | safe: 'resourceUrl'" frameborder="0" allowfullscreen></iframe-->
+        <iframe [src]="apod.url | safe: 'resourceUrl'" frameborder="0" allowfullscreen></iframe>
+      </div>
+      
+      <div>
+        {{ apod.date }}
+      </div>
 
     <div>
-      <span *ngIf="apod.copyright">&copy; {{ apod.copyright }} </span>
+      <span *ngIf="apod.copyright" class="copy">&copy; {{ apod.copyright }} </span>
       {{ apod.date }}
     </div>
 
