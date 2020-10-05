@@ -27,9 +27,15 @@ export class ApodComponent implements OnInit {
 
   getApod(date:string): void{
 
-    //If the date is falsy, use today's date
+    //If the date is falsy, use yestoday's date.
+    // The reason being: due to different time zone,
+    // today's picture might not have been available yet. Causing error.
     if(!date){
-      date = new Date().toISOString().slice(0,10);
+      let dateObj = new Date(); 
+  
+      // subtract one day from current time                           
+      dateObj.setDate(dateObj.getDate() - 1);  
+      date = dateObj.toISOString().slice(0,10);
     }
   
     this.apodService.getApod(date).subscribe(
