@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
 
+## Copy ng-apod.config.ts from Google drive to config/ folder parallel to NG-APOD
+
+This file contains the APOD api key. It should not be in the repo.
+
 ## use environment specific angular.json for different envs
 
 copy the corresponding angular.json.dev (.prod) to angular.json for different environments.
