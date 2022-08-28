@@ -14,7 +14,7 @@ copy the corresponding angular.json.dev (.prod) to angular.json for different en
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/ng-apod`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
